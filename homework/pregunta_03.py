@@ -28,6 +28,3 @@ def pregunta_03():
         resultado = list(letras.items())
         return sorted(resultado)
 
-if __name__ == "__main__":
-    resultado = pregunta_03()
-    print(resultado)
