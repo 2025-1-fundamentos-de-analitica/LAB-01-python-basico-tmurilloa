@@ -20,3 +20,23 @@ def pregunta_10():
 
 
     """
+    with open("files/input/data.csv") as data:
+        lista_complt = []
+        for line in data:
+            linea = line.split()
+            letra = linea[0]
+
+            col4 = linea[3]
+            col4 = col4.split(",")
+            col5 = linea[4]
+            col5 = col5.split(",")
+
+            lista_complt.append((letra, len(col4), len(col5)))
+
+        return lista_complt
+    
+if __name__ == "__main__":
+    print(pregunta_10())
+
+
+

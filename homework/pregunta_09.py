@@ -24,3 +24,24 @@ def pregunta_09():
      'jjj': 18}}
 
     """
+    with open("files/input/data.csv") as data:
+        resultado_dic = {}
+        for line in data:
+            linea = line.split()
+            diccionario = linea[4]
+            
+            clave_valor = diccionario.split(",")
+            
+            for i in clave_valor:
+                clave = i.split(":")[0]
+            
+
+                if clave not in resultado_dic:
+                    resultado_dic[clave] = 1
+                else:
+                    resultado_dic[clave] += 1
+        
+
+        return dict(sorted(resultado_dic.items()))
+                
+                

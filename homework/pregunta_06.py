@@ -48,8 +48,4 @@ def pregunta_06():
         resultado = [(clave, min_clave[clave], max_clave[clave]) for clave in sorted(max_clave.keys())]
         return resultado
 
-            
-
-
-if __name__ == "__main__":
-    print(pregunta_06())
+        

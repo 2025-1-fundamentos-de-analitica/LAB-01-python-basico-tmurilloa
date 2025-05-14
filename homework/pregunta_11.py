@@ -16,3 +16,25 @@ def pregunta_11():
 
 
     """
+    with open("files/input/data.csv") as data:
+        letra_dic = {}
+        for line in data:
+            linea = line.split()
+
+            valor = int(linea[1])
+            col4 = linea[3]
+            letras = col4.split(",")
+            
+            for letra in letras:
+                if letra not in letra_dic:
+                    letra_dic[letra] = valor
+                else:
+                    letra_dic[letra] += valor
+        
+        resultado = dict(sorted(letra_dic.items()))
+
+        return resultado
+
+
+if __name__ == "__main__":
+    print(pregunta_11())
